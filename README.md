@@ -11,12 +11,13 @@ The installation itself requires [GNU Stow][GNU Stow] - awesome tool as a symlin
 ## Dependencies ##
 
 * [GNU Stow][GNU Stow] - Symlink manager
-* [kitty][kitty] - Cross-platform, fast, feature-rich, GPU based terminal
 * [bat][bat] - A `cat` clone with syntax highlighting and Git integration
-* [neofetch][neofetch] - A command-line system information tool
 * [git][git] - most popular source distributed version control system
 * [gnupg][gnupg] - OpenPGP standard implementation
+* [kitty][kitty] - Cross-platform, fast, feature-rich, GPU based terminal
+* [neofetch][neofetch] - A command-line system information tool
 * [pinentry-qt][pinentry] - GUI application used to enter passphrases
+* [starship][starship] - The minimal, blazing-fast and infinitely customizable prompt
 
 ```bash
 # Install deps
@@ -28,6 +29,7 @@ yay -S \
   kitty \
   neofetch \
   pinentry \
+  starship \
   stow
 
 echo "--target ${HOME}" > ~/.stowrc
@@ -46,3 +48,4 @@ echo "--target ${HOME}" > ~/.stowrc
 [gnupg]: https://gnupg.org
 [pinentry]: https://wiki.archlinux.org/index.php/GnuPG#pinentry
 [KDE Baloo]: https://wiki.archlinux.org/index.php/Baloo
+[starship]: https://starship.rs
