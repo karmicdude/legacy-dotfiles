@@ -15,21 +15,27 @@ The installation itself requires [GNU Stow][GNU Stow] - awesome tool as a symlin
 * [bat][bat] - A `cat` clone with syntax highlighting and Git integration
 * [neofetch][neofetch] - A command-line system information tool
 * [git][git] - most popular source distributed version control system
+* [gnupg][gnupg] - OpenPGP standard implementation
+* [pinentry-qt][pinentry] - GUI application used to enter passphrases
 
 ```bash
 # Install deps
 yay -S \
-  stow \
-  kitty \
-  imagemagick \
   bat \
-  neofetch
+  git \
+  gnupg \
+  imagemagick \
+  kitty \
+  neofetch \
+  pinentry \
+  stow
+
+echo "--target ${HOME}" > ~/.stowrc
 ```
 
 ## Features ##
 
 * Disabled KDE [**Baloo**][KDE Baloo] service
-
 
 [Arch Linux]: https://wiki.archlinux.org/index.php/Arch_Linux
 [GNU Stow]: https://www.gnu.org/software/stow/
@@ -37,4 +43,6 @@ yay -S \
 [bat]: https://github.com/sharkdp/bat
 [neofetch]: https://github.com/dylanaraps/neofetch
 [git]: https://git-scm.com
+[gnupg]: https://gnupg.org
+[pinentry]: https://wiki.archlinux.org/index.php/GnuPG#pinentry
 [KDE Baloo]: https://wiki.archlinux.org/index.php/Baloo
