@@ -1,0 +1,26 @@
+[user]
+	email = voronov.semyon@gmail.com
+	name = Voronov S.V
+	signingKey = A0E3B01C7FF81CA9
+[gpg]
+	program = gpg
+[commit]
+	gpgSign = true
+[alias]
+	s = status
+	l = log --color --graph --date=format:\"%Y-%m-%d %H:%M:%S\" --format=\"%C(Yellow)%h%C(Reset) %C(White)| %C(bold blue)<%cn>%Creset %C(White)| %C(Cyan)%ad %C(White)|%C(Reset) %<(100,trunc)%s %C(Yellow)%d%C(Reset)\"
+	c = commit -m
+	pushall = push all --all
+[pull]
+	rebase = false
+[hub]
+	protocol = git
+[init]
+	defaultBranch = main
+[diff]
+    tool = kitty
+[difftool]
+    prompt = false
+    trustExitCode = true
+[difftool "kitty"]
+    cmd = kitty +kitten diff $LOCAL $REMOTE
