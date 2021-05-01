@@ -18,9 +18,9 @@
 [init]
 	defaultBranch = main
 [diff]
-    	tool = kitty
+	tool = kitty
 [difftool]
-    	prompt = false
-    	trustExitCode = true
+	prompt = false
+	trustExitCode = true
 [difftool "kitty"]
-    	cmd = kitty +kitten diff $LOCAL $REMOTE
+	cmd = kitty +kitten diff $LOCAL $REMOTE
