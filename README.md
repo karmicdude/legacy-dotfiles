@@ -32,7 +32,7 @@ yay -S \
   starship \
   stow
 
-echo "--target ${HOME}" > ~/.stowrc
+echo "--target ~" > ~/.stowrc
 ```
 
 ## Features ##
