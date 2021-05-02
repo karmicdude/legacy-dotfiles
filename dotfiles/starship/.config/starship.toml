@@ -1,0 +1,213 @@
+add_newline = true
+
+format = """
+$time\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$kubernetes\
+$helm\
+$package\
+$python\
+$terraform\
+$cmd_duration\
+$line_break\
+$character\
+"""
+
+[character]
+success_symbol = '[➜](bold green)'
+error_symbol = '[✗](bold red)'
+
+[cmd_duration]
+min_time = 10000
+
+[directory]
+format = '[$read_only]($read_only_style)[$path]($style) '
+style = 'bold fg:#c180ff'
+read_only = ''
+read_only_style = 'bold red'
+truncation_length = 10
+truncate_to_repo = true
+
+[git_branch]
+format = '[❘](bold fg:#6b6b6b) [$symbol$branch]($style) '
+symbol = ' '
+always_show_remote = true
+truncation_length = 18
+truncation_symbol = '…'
+style = 'bold fg:#62ff00'
+
+[git_status]
+format = '(\[[$conflicted](#fa0000)[$stashed](#d5fa00)[$deleted](#fa00c4)[$renamed](#00bbfa)[$modified](#fab411)[$staged](#00fa08)[$untracked](#fa0000)[$ahead_behind]($style)\]) '
+style = 'bold fg:#62ff00'
+
+[helm]
+format = '[$symbol($version )]($style)'
+style = 'bold fg:#00bbff'
+symbol = '⎈ '
+
+[kubernetes]
+disabled = false
+format = '[❘](bold fg:#6b6b6b) [$symbol$context( \($namespace\))]($style) '
+symbol = '❂ '
+style = 'bold fg:#00bbff'
+
+[package]
+format = '[$symbol$version]($style) '
+symbol = ' '
+style = 'bold fg:#006aff'
+
+[python]
+format = '[[❘](bold fg:#6b6b6b)](bold fg:#6b6b6b) [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = ' '
+style = 'bold fg:#ffa200'
+
+[terraform]
+format = '[❘](bold fg:#6b6b6b) [$symbol $workspace]($style) '
+symbol = '₮'
+
+[time]
+disabled = false
+format = '[\[$time\]]($style) '
+time_format = '%H:%M'
+
+[aws]
+disabled = true
+
+[battery]
+disabled = true
+
+[cmake]
+disabled = true
+
+[conda]
+disabled = true
+
+[crystal]
+disabled = true
+
+[dart]
+disabled = true
+
+[deno]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[dotnet]
+disabled = true
+
+[elixir]
+disabled = true
+
+[elm]
+disabled = true
+
+[erlang]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[git_commit]
+disabled = true
+
+[git_state]
+disabled = true
+
+[golang]
+disabled = true
+
+[hostname]
+disabled = true
+
+[java]
+disabled = true
+
+[jobs]
+disabled = true
+
+[julia]
+disabled = true
+
+[kotlin]
+disabled = true
+
+[line_break]
+disabled = false
+
+[lua]
+disabled = true
+
+[memory_usage]
+disabled = true
+
+[hg_branch]
+disabled = true
+
+[nim]
+disabled = true
+
+[nix_shell]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[ocaml]
+disabled = true
+
+[openstack]
+disabled = true
+
+[perl]
+disabled = true
+
+[php]
+disabled = true
+
+[purescript]
+disabled = true
+
+[red]
+disabled = true
+
+[ruby]
+disabled = true
+
+[rust]
+disabled = true
+
+[scala]
+disabled = true
+
+[shlvl]
+disabled = true
+
+[singularity]
+disabled = true
+
+[status]
+disabled = true
+
+[swift]
+disabled = true
+
+[shell]
+disabled = true
+
+[username]
+disabled = true
+
+[vagrant]
+disabled = true
+
+[vcsh]
+disabled = true
+
+[zig]
+disabled = true
