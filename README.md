@@ -20,10 +20,14 @@ The installation itself requires [GNU Stow][GNU Stow] - awesome tool as a symlin
 * [starship][starship] - The minimal, blazing-fast and infinitely customizable prompt
 
 ```bash
+pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git /tmp/yay
+cd /tmp/yay
+makepkg -si
+
 # Install deps
 yay -S \
   bat \
-  git \
   gnupg \
   imagemagick \
   kitty \
@@ -32,7 +36,7 @@ yay -S \
   starship \
   stow
 
-echo "--target ~" > ~/.stowrc
+echo "--target=~" > ~/.stowrc
 ```
 
 ## Features ##
