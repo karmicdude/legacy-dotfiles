@@ -37,6 +37,18 @@ yay -S \
   stow
 
 echo "--target=~" > ~/.stowrc
+
+# Starship requires the Nerd font package for your terminal to display icons.
+# You can choose any of these. I prefer nerd-fonts-ubuntu-mono
+yay -S \
+  otf-nerd-fonts-fira-code \
+  nerd-fonts-dejavu-complete \
+  nerd-fonts-fantasque-sans-mono \
+  nerd-fonts-iosevka \
+  nerd-fonts-jetbrains-mono \
+  nerd-fonts-mononoki \
+  nerd-fonts-roboto-mono \
+  nerd-fonts-ubuntu-mono
 ```
 
 ## Features ##
