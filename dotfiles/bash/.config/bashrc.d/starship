@@ -1,0 +1,14 @@
+# Init starship PROMPT
+
+# Set custom windows title
+function set_win_title(){
+  echo -ne "\033]\007"
+}
+# shellcheck disable=SC2034
+starship_precmd_user_func="set_win_title"
+
+# Clear windows title
+export PROMPT_COMMAND=
+eval "$(starship init bash)"
+
+# vim:ft=sh

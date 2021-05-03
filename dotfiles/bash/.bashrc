@@ -40,13 +40,12 @@ export ALTERNATE_EDITOR="nano"
 export PAGER="bat -n"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-
 BASH_CONF_DIR=~/.config/bashrc.d
 BASH_CONF_FILES="
   aliases
   functions
   prompt
-  virtualenvwrapper
+  starship
 "
 
 # Source included configs
@@ -63,9 +62,6 @@ done
 
 # Display beautiful system information
 [[ -f /usr/bin/neofetch ]] && neofetch | cat -s
-
-# Init starship PROMPT
-eval "$(starship init bash)"
 
 [[ -f /usr/bin/terraform ]] && complete -C /usr/bin/terraform terraform
 
