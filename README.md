@@ -22,6 +22,7 @@ The installation itself requires [GNU Stow][GNU Stow] - awesome tool as a symlin
 * [pwgen][pwgen] - password generation tool (used in `pwgen` alias)
 * [starship][starship] - The minimal, blazing-fast and infinitely customizable prompt
 * [VSCode][VSCode] - popular code editor (used in `c` alias)
+* [alsa-utils][alsa] - ALSA utilites (used for `sb_output_switcher.sh` script)
 
 ```bash
 # Install yay as AUR helper
@@ -32,6 +33,7 @@ makepkg -si
 
 # Install deps
 yay -S \
+  alsa-utils \
   bat \
   gistit \
   gnupg \
@@ -92,6 +94,7 @@ shopt -os history
 
 * Disabled KDE [**Baloo**][KDE Baloo] service
 
+[alsa]: https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture#ALSA_Utilities
 [Arch Linux]: https://wiki.archlinux.org/index.php/Arch_Linux
 [bat]: https://github.com/sharkdp/bat
 [gist]: https://github.com/defunkt/gist
