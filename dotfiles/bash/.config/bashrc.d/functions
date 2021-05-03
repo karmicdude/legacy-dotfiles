@@ -1,0 +1,55 @@
+# ls with numerical permissions
+# shellcheck disable=SC2012
+function ll {
+  ls -l "$@" | awk '
+    {k=0;s=0;for( i = 0; i <= 8; i++ ){k+=((substr($1,i+2,1) ~ /[rwxst]/)*2^(8-i))}
+    j=4;for(i=4;i<=10;i+=3){s+=((substr($1,i,1) ~ /[stST]/)*j);j/=2}
+    if(k){printf("%0o%0o ",s,k )}; print
+  }'
+}
+
+# cat file with word highlighting
+function gcat {
+  grep -E --color "$1|$" "${@:2}"
+}
+
+# Share current dir in web with python simple http server
+function shareit {
+  local python_ver
+  python_ver=$(python -c 'import sys; print(sys.version_info[0])')
+  if [ "$python_ver" == "2" ]; then
+    python -m SimpleHTTPServer
+  elif [ "$python_ver" == "3" ]; then
+    python -m http.server
+  else
+    echo "Unknow python interpreter"
+    return 1
+  fi
+}
+
+# Generate random pass
+function pgen {
+  local len=$1
+  if [ -z "$len" ]; then
+    len=10
+  fi
+  #tr -dc A-Za-z0-9_ < /dev/urandom | head -c $len
+  tr -dc "[:graph:]" < /dev/urandom | head -c $len
+}
+
+# Additional commands for Docker
+function docker() {
+  case "$1" in
+    "di") command docker rmi --force "$(docker images -aq)";; # Delete all images
+    "dc") command docker rm --force "$(docker ps -aq)";;      # Delete all containers
+    *   ) command docker "$@";;
+  esac
+}
+
+export -f docker
+export -f gcat
+export -f ll
+export -f pgen
+export -f shareit
+
+# vi:ft=sh
