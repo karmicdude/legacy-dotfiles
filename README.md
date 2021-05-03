@@ -32,6 +32,7 @@ yay -S \
   imagemagick \
   kitty \
   neofetch \
+  openssh \
   pinentry \
   starship \
   stow
@@ -50,6 +51,18 @@ yay -S \
   nerd-fonts-roboto-mono \
   nerd-fonts-ubuntu-mono
 ```
+
+### SSH Agent ###
+
+```bash
+# Enable ssh-agent service
+systemctl --user daemon-reload
+systemctl --user enable --now ssh-agent.service
+```
+
+**NOTE:** If for some reason you decide to disable `ssh-agent.service`,
+then the symlink to the source file in stow project will be deleted.
+To bring it back, you can run from `repo_path/dotfiles` command `stow ssh-agent`
 
 ## Features ##
 
