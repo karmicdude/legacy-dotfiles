@@ -1,0 +1,20 @@
+# Bash Aliases
+
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+
+alias la='command -p ls --color=always --group-directories-first -AlF'
+alias li='command -p ls --color=always --group-directories-first -AlFi'
+alias ls='command -p ls --color=always --group-directories-first -F'
+
+alias c='code'
+alias dus='du -h --max-depth=1 | sort -rh'
+alias pwgen='pwgen -cnys'
+alias ssh-del-hostkey='ssh-keygen -R'
+# shellcheck disable=SC2142
+alias out='gist -sco'
+alias pb='pastebinit -b paste.debian.net -f bash | xclip -sel clip'
+
+# vi:ft=sh
