@@ -20,6 +20,7 @@ The installation itself requires [GNU Stow][GNU Stow] - awesome tool as a symlin
 * [starship][starship] - The minimal, blazing-fast and infinitely customizable prompt
 
 ```bash
+# Install yay as AUR helper
 pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git /tmp/yay
 cd /tmp/yay
@@ -37,7 +38,11 @@ yay -S \
   starship \
   stow
 
-echo "--target=~" > ~/.stowrc
+# Add stow default settings
+cat << EOF > ~/.stowrc
+--target=~
+--verbose
+EOF
 
 # Starship requires the Nerd font package for your terminal to display icons.
 # You can choose any of these. I prefer nerd-fonts-ubuntu-mono
