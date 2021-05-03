@@ -75,5 +75,4 @@ fi
 
 [[ -f /usr/bin/terraform ]] && complete -C /usr/bin/terraform terraform
 
-# vi:syntax=sh
-# vi:ft=sh
+# vim:ft=sh
