@@ -12,12 +12,16 @@ The installation itself requires [GNU Stow][GNU Stow] - awesome tool as a symlin
 
 * [GNU Stow][GNU Stow] - Symlink manager
 * [bat][bat] - A `cat` clone with syntax highlighting and Git integration
+* [gist][gist] - GitHub gists tool (used in `out` alias)
 * [git][git] - most popular source distributed version control system
 * [gnupg][gnupg] - OpenPGP standard implementation
 * [kitty][kitty] - Cross-platform, fast, feature-rich, GPU based terminal
 * [neofetch][neofetch] - A command-line system information tool
+* [pastebinit][pastebinit] - A multi pastebin service (used in `pb` alias)
 * [pinentry-qt][pinentry] - GUI application used to enter passphrases
+* [pwgen][pwgen] - password generation tool (used in `pwgen` alias)
 * [starship][starship] - The minimal, blazing-fast and infinitely customizable prompt
+* [VSCode][VSCode] - popular code editor (used in `c` alias)
 
 ```bash
 # Install yay as AUR helper
@@ -29,13 +33,17 @@ makepkg -si
 # Install deps
 yay -S \
   bat \
+  gistit \
   gnupg \
   imagemagick \
   kitty \
   neofetch \
   openssh \
+  pastebinit \
   pinentry \
+  pwgen \
   starship \
+  visual-studio-code-bin \
   stow
 
 # Add stow default settings
@@ -69,17 +77,32 @@ systemctl --user enable --now ssh-agent.service
 then the symlink to the source file in stow project will be deleted.
 To bring it back, you can run from `repo_path/dotfiles` command `stow ssh-agent`
 
+### GIST ###
+
+```bash
+# Create API Token for gist
+# https://github.com/settings/tokens
+shopt -ou history
+echo YOUR_TOKEN_HERE > ~/.gist && \
+chmod go-rwx ~/.gist
+shopt -os history
+```
+
 ## Features ##
 
 * Disabled KDE [**Baloo**][KDE Baloo] service
 
 [Arch Linux]: https://wiki.archlinux.org/index.php/Arch_Linux
-[GNU Stow]: https://www.gnu.org/software/stow/
-[kitty]: https://github.com/kovidgoyal/kitty
 [bat]: https://github.com/sharkdp/bat
-[neofetch]: https://github.com/dylanaraps/neofetch
+[gist]: https://github.com/defunkt/gist
 [git]: https://git-scm.com
+[GNU Stow]: https://www.gnu.org/software/stow/
 [gnupg]: https://gnupg.org
-[pinentry]: https://wiki.archlinux.org/index.php/GnuPG#pinentry
 [KDE Baloo]: https://wiki.archlinux.org/index.php/Baloo
+[kitty]: https://github.com/kovidgoyal/kitty
+[neofetch]: https://github.com/dylanaraps/neofetch
+[pastebinit]: https://launchpad.net/pastebinit
+[pinentry]: https://wiki.archlinux.org/index.php/GnuPG#pinentry
+[pwgen]: https://sourceforge.net/projects/pwgen
 [starship]: https://starship.rs
+[VSCode]: https://code.visualstudio.com
