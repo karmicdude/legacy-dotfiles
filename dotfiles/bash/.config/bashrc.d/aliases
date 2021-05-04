@@ -1,3 +1,4 @@
+# shellcheck disable=SC2148
 # Bash Aliases
 
 alias ..='cd ../'
@@ -16,5 +17,13 @@ alias ssh-del-hostkey='ssh-keygen -R'
 # shellcheck disable=SC2142
 alias out='gist -sco'
 alias pb='pastebinit -b paste.debian.net -f bash | xclip -sel clip'
+
+# Kubernetes
+alias k-context='$(which kubectx)'
+alias k-namespace='$(which kubenx)'
+complete -F _kube_contexts k-context
+complete -F _kube_namespaces k-namespace
+EXECIGNORE=${EXECIGNORE}:$(which kubectx):$(which kubens)
+export EXECIGNORE
 
 # vi:ft=sh

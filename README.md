@@ -11,18 +11,19 @@ The installation itself requires [GNU Stow][GNU Stow] - awesome tool as a symlin
 ## Dependencies ##
 
 * [GNU Stow][GNU Stow] - Symlink manager
+* [alsa-utils][alsa] - ALSA utilites (used for `sb_output_switcher.sh` script)
 * [bat][bat] - A `cat` clone with syntax highlighting and Git integration
 * [gist][gist] - GitHub gists tool (used in `out` alias)
 * [git][git] - most popular source distributed version control system
 * [gnupg][gnupg] - OpenPGP standard implementation
 * [kitty][kitty] - Cross-platform, fast, feature-rich, GPU based terminal
+* [kubectx][kubectx] - A util to manage and switch between clusters and namespaces (used for `k-context` and `k-namespace` aliases)
 * [neofetch][neofetch] - A command-line system information tool
 * [pastebinit][pastebinit] - A multi pastebin service (used in `pb` alias)
 * [pinentry-qt][pinentry] - GUI application used to enter passphrases
 * [pwgen][pwgen] - password generation tool (used in `pwgen` alias)
 * [starship][starship] - The minimal, blazing-fast and infinitely customizable prompt
 * [VSCode][VSCode] - popular code editor (used in `c` alias)
-* [alsa-utils][alsa] - ALSA utilites (used for `sb_output_switcher.sh` script)
 
 ```bash
 # Install yay as AUR helper
@@ -39,14 +40,15 @@ yay -S \
   gnupg \
   imagemagick \
   kitty \
+  kubectx \
   neofetch \
   openssh \
   pastebinit \
   pinentry \
   pwgen \
   starship \
-  visual-studio-code-bin \
-  stow
+  stow \
+  visual-studio-code-bin
 
 # Add stow default settings
 cat << EOF > ~/.stowrc
@@ -90,6 +92,15 @@ chmod go-rwx ~/.gist
 shopt -os history
 ```
 
+### Fonts ###
+
+```bash
+# After install fonts update the cache
+fc-cache -fr
+# Show fonts list
+fc-list
+```
+
 ## Features ##
 
 * Disabled KDE [**Baloo**][KDE Baloo] service
@@ -103,6 +114,7 @@ shopt -os history
 [gnupg]: https://gnupg.org
 [KDE Baloo]: https://wiki.archlinux.org/index.php/Baloo
 [kitty]: https://github.com/kovidgoyal/kitty
+[kubectx]: https://github.com/ahmetb/kubectx
 [neofetch]: https://github.com/dylanaraps/neofetch
 [pastebinit]: https://launchpad.net/pastebinit
 [pinentry]: https://wiki.archlinux.org/index.php/GnuPG#pinentry
