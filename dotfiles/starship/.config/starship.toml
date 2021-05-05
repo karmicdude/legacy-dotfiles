@@ -23,6 +23,7 @@ error_symbol = '[✗](bold red)'
 
 [cmd_duration]
 min_time = 10000
+format = '[❘](bold fg:#6b6b6b) [$duration]($style) '
 
 [directory]
 format = '[$read_only]($read_only_style)[$path]($style) '
