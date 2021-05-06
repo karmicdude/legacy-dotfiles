@@ -17,6 +17,8 @@ alias ssh-del-hostkey='ssh-keygen -R'
 # shellcheck disable=SC2142
 alias out='gist -sco'
 alias pb='pastebinit -b paste.debian.net -f bash | xclip -sel clip'
+alias xc='xclip -sel clip'
+alias path="sort <<< \"\${PATH//:/$'\n'}\""
 
 # Kubernetes
 alias k-context='$(which kubectx)'
