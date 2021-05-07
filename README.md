@@ -14,8 +14,9 @@ The installation itself requires [GNU Stow][GNU Stow] - awesome tool as a symlin
 * [alsa-utils][alsa] - ALSA utilites (used for `sb_output_switcher.sh` script)
 * [bat][bat] - A `cat` clone with syntax highlighting and Git integration
 * [gist][gist] - GitHub gists tool (used in `out` alias)
-* [git][git] - most popular source distributed version control system
+* [git][git] - Most popular source distributed version control system
 * [gnupg][gnupg] - OpenPGP standard implementation
+* [goto][goto] - Fast projects navigation util (used in goto projects aliases)
 * [helmenv][helmenv] - Helm version manager (used in `helmenv` function)
 * [kitty][kitty] - Cross-platform, fast, feature-rich, GPU based terminal
 * [kubectx][kubectx] - A util to manage and switch between clusters and namespaces (used for `k-context` and `k-namespace` aliases)
@@ -39,6 +40,7 @@ yay -S \
   bat \
   gistit \
   gnupg \
+  goto-git \
   helmenv-bin \
   imagemagick \
   kitty \
@@ -113,6 +115,7 @@ fc-list
 [gist]: https://github.com/defunkt/gist
 [git]: https://git-scm.com
 [GNU Stow]: https://www.gnu.org/software/stow/
+[goto]: https://github.com/iridakos/goto
 [gnupg]: https://gnupg.org
 [helmenv]: https://github.com/little-angry-clouds/kubernetes-binaries-managers/blob/master/cmd/helmenv/
 [KDE Baloo]: https://wiki.archlinux.org/index.php/Baloo

@@ -65,4 +65,6 @@ done
 
 [[ -f /usr/bin/terraform ]] && complete -C /usr/bin/terraform terraform
 
+[[ -f /usr/share/goto/goto.sh ]] && . /usr/share/goto/goto.sh
+
 # vim:ft=sh
