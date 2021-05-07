@@ -16,6 +16,7 @@ The installation itself requires [GNU Stow][GNU Stow] - awesome tool as a symlin
 * [gist][gist] - GitHub gists tool (used in `out` alias)
 * [git][git] - most popular source distributed version control system
 * [gnupg][gnupg] - OpenPGP standard implementation
+* [helmenv][helmenv] - Helm version manager (used in `helmenv` function)
 * [kitty][kitty] - Cross-platform, fast, feature-rich, GPU based terminal
 * [kubectx][kubectx] - A util to manage and switch between clusters and namespaces (used for `k-context` and `k-namespace` aliases)
 * [neofetch][neofetch] - A command-line system information tool
@@ -38,6 +39,7 @@ yay -S \
   bat \
   gistit \
   gnupg \
+  helmenv-bin \
   imagemagick \
   kitty \
   kubectx \
@@ -112,6 +114,7 @@ fc-list
 [git]: https://git-scm.com
 [GNU Stow]: https://www.gnu.org/software/stow/
 [gnupg]: https://gnupg.org
+[helmenv]: https://github.com/little-angry-clouds/kubernetes-binaries-managers/blob/master/cmd/helmenv/
 [KDE Baloo]: https://wiki.archlinux.org/index.php/Baloo
 [kitty]: https://github.com/kovidgoyal/kitty
 [kubectx]: https://github.com/ahmetb/kubectx
