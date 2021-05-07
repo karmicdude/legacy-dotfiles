@@ -22,7 +22,7 @@ alias path="sort <<< \"\${PATH//:/$'\n'}\""
 
 # Kubernetes
 alias k-context='$(which kubectx)'
-alias k-namespace='$(which kubenx)'
+alias k-namespace='$(which kubens)'
 complete -F _kube_contexts k-context
 complete -F _kube_namespaces k-namespace
 EXECIGNORE=${EXECIGNORE}:$(which kubectx):$(which kubens)
