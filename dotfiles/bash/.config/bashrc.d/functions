@@ -46,13 +46,22 @@ function docker() {
   esac
 }
 
-# Additional command for HelmEnv
+# Additional command for helmenv
 # https://github.com/little-angry-clouds/kubernetes-binaries-managers
 function helmenv() {
   case "$1" in
     "lr") command helmenv list remote --all-versions;;
     "ll") command helmenv list local;;
     *   ) command helmenv "$@";;
+  esac
+}
+# Additional command for kbenv
+# https://github.com/little-angry-clouds/kubernetes-binaries-managers
+function kbenv() {
+  case "$1" in
+    "lr") command kbenv list remote --all-versions;;
+    "ll") command kbenv list local;;
+    *   ) command kbenv "$@";;
   esac
 }
 
@@ -62,5 +71,6 @@ export -f ll
 export -f pgen
 export -f shareit
 export -f helmenv
+export -f kbenv
 
 # vi:ft=sh

@@ -18,6 +18,7 @@ The installation itself requires [GNU Stow][GNU Stow] - awesome tool as a symlin
 * [gnupg][gnupg] - OpenPGP standard implementation
 * [goto][goto] - Fast projects navigation util (used in goto projects aliases)
 * [helmenv][helmenv] - Helm version manager (used in `helmenv` function)
+* [kbenv][kbenv] - `kubectl` version manager (used in `kbenv` function)
 * [kitty][kitty] - Cross-platform, fast, feature-rich, GPU based terminal
 * [kubectx][kubectx] - A util to manage and switch between clusters and namespaces (used for `k-context` and `k-namespace` aliases)
 * [neofetch][neofetch] - A command-line system information tool
@@ -43,6 +44,7 @@ yay -S \
   goto-git \
   helmenv-bin \
   imagemagick \
+  kbenv-bin \
   kitty \
   kubectx \
   neofetch \
@@ -119,6 +121,7 @@ fc-list
 [gnupg]: https://gnupg.org
 [helmenv]: https://github.com/little-angry-clouds/kubernetes-binaries-managers/blob/master/cmd/helmenv/
 [KDE Baloo]: https://wiki.archlinux.org/index.php/Baloo
+[kbenv]: https://github.com/little-angry-clouds/kubernetes-binaries-managers/tree/master/cmd/kbenv
 [kitty]: https://github.com/kovidgoyal/kitty
 [kubectx]: https://github.com/ahmetb/kubectx
 [neofetch]: https://github.com/dylanaraps/neofetch
