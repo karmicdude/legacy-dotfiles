@@ -63,7 +63,7 @@ style = 'bold fg:#006aff'
 
 [python]
 format = '[[❘](bold fg:#6b6b6b)](bold fg:#6b6b6b) [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
-symbol = ' '
+symbol = '  '
 style = 'bold fg:#ffa200'
 
 [terraform]
