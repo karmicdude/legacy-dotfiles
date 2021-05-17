@@ -19,6 +19,7 @@ alias out='gist -sco'
 alias pb='pastebinit -b paste.debian.net -f bash | xclip -sel clip'
 alias xc='xclip -sel clip'
 alias path="sort <<< \"\${PATH//:/$'\n'}\""
+alias ssh='kitty +kitten ssh'
 
 # Kubernetes
 alias k-context='$(which kubectx)'
