@@ -11,7 +11,7 @@ The installation itself requires [GNU Stow][GNU Stow] - awesome tool as a symlin
 ## Dependencies ##
 
 * [GNU Stow][GNU Stow] - Symlink manager
-* [alsa-utils][alsa] - ALSA utilites (used for `sb_output_switcher.sh` script)
+* [alsa-utils][alsa] - ALSA utilites (used in `sb_output_switcher.sh` script)
 * [bat][bat] - A `cat` clone with syntax highlighting and Git integration
 * [gist][gist] - GitHub gists tool (used in `out` alias)
 * [git][git] - Most popular source distributed version control system
@@ -20,8 +20,9 @@ The installation itself requires [GNU Stow][GNU Stow] - awesome tool as a symlin
 * [helmenv][helmenv] - Helm version manager (used in `helmenv` function)
 * [kbenv][kbenv] - `kubectl` version manager (used in `kbenv` function)
 * [kitty][kitty] - Cross-platform, fast, feature-rich, GPU based terminal
-* [kubectx][kubectx] - A util to manage and switch between clusters and namespaces (used for `k-context` and `k-namespace` aliases)
+* [kubectx][kubectx] - A util to manage and switch between clusters and namespaces (used in `k-context` and `k-namespace` aliases)
 * [neofetch][neofetch] - A command-line system information tool
+* [parallel][parallel] - A shell tool for executing jobs in parallel (used in `kubectl` function)
 * [pastebinit][pastebinit] - A multi pastebin service (used in `pb` alias)
 * [pinentry-qt][pinentry] - GUI application used to enter passphrases
 * [pwgen][pwgen] - password generation tool (used in `pwgen` alias)
@@ -125,6 +126,7 @@ fc-list
 [kitty]: https://github.com/kovidgoyal/kitty
 [kubectx]: https://github.com/ahmetb/kubectx
 [neofetch]: https://github.com/dylanaraps/neofetch
+[parallel]: https://www.gnu.org/software/parallel
 [pastebinit]: https://launchpad.net/pastebinit
 [pinentry]: https://wiki.archlinux.org/index.php/GnuPG#pinentry
 [pwgen]: https://sourceforge.net/projects/pwgen
