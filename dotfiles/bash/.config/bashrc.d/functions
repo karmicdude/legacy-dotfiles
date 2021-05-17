@@ -65,11 +65,27 @@ function kbenv() {
   esac
 }
 
+function _kubectl_get_all() {
+  command kubectl api-resources --verbs=list --namespaced -o name \
+  | xargs -n 1 kubectl get --show-kind --ignore-not-found "${2}"
+}
+
+function kubectl() {
+  case "$1" in
+    "ga")
+      kubectl api-resources --verbs=list --namespaced -o name 2>/dev/null | \
+      parallel "echo -e '\n### {} ###'; kubectl get {} --show-kind --ignore-not-found ${*:2}";;
+    "gnp") kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName="${*:2}";;
+    *   ) command kubectl "$@";;
+  esac
+}
+
 export -f docker
 export -f gcat
 export -f ll
 export -f pgen
 export -f shareit
+export -f kubectl
 export -f helmenv
 export -f kbenv
 
