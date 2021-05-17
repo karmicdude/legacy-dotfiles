@@ -117,7 +117,7 @@ fc-list
 [gist]: https://github.com/defunkt/gist
 [git]: https://git-scm.com
 [GNU Stow]: https://www.gnu.org/software/stow/
-[goto]: https://github.com/iridakos/goto
+[goto]: https://github.com/iridakos/goto/
 [gnupg]: https://gnupg.org
 [helmenv]: https://github.com/little-angry-clouds/kubernetes-binaries-managers/blob/master/cmd/helmenv/
 [KDE Baloo]: https://wiki.archlinux.org/index.php/Baloo
