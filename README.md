@@ -2,11 +2,25 @@
 
 This repository contains a set of configuration files for the `bash` shell, `DE` and programs that I use most regularly.
 
-My favorite OS is [Arch Linux][Arch Linux], so package names and config paths are relevant for it and may a bit differ for other distros.
+My favorite OS is [Arch Linux][Arch Linux] and [Plasma ][Plasma] (now), so package names and config paths are relevant for it and may a bit differ for other distros.
 
 In addition, I use two workstations (PC and a laptop), which have slightly differences in the configs. So some configs are separated for use on different devices.
 
 The installation itself requires [GNU Stow][GNU Stow] - awesome tool as a symlink manager.
+
+# Table of contents #
+<!-- TOC -->
+
+- [Dependencies](#dependencies)
+- [Dependencies configuration](#dependencies-configuration)
+    - [SSH Agent](#ssh-agent)
+    - [Gist](#gist)
+    - [Fonts](#fonts)
+    - [Google Chrome](#google-chrome)
+    - [Profile Sync Daemon](#profile-sync-daemon)
+- [Features](#features)
+
+<!-- /TOC -->
 
 ## Dependencies ##
 
@@ -80,6 +94,8 @@ yay -S \
   nerd-fonts-ubuntu-mono
 ```
 
+## Dependencies configuration ##
+
 ### SSH Agent ###
 
 ```bash
@@ -92,7 +108,7 @@ systemctl --user enable --now ssh-agent.service
 then the symlink to the source file in stow project will be deleted.
 To bring it back, you can run from `repo_path/dotfiles` command `stow ssh-agent`
 
-### GIST ###
+### Gist ###
 
 ```bash
 # Create API Token for gist
@@ -135,21 +151,22 @@ systemctl --user enable psd
 [alsa]: https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture#ALSA_Utilities
 [Arch Linux]: https://wiki.archlinux.org/index.php/Arch_Linux
 [bat]: https://github.com/sharkdp/bat
+[chrome]: https://www.google.com/intl/en/chrome/beta
 [gist]: https://github.com/defunkt/gist
 [git]: https://git-scm.com
 [GNU Stow]: https://www.gnu.org/software/stow/
-[chrome]: https://www.google.com/intl/en/chrome/beta
-[goto]: https://github.com/iridakos/goto/
 [gnupg]: https://gnupg.org
+[goto]: https://github.com/iridakos/goto/
 [helmenv]: https://github.com/little-angry-clouds/kubernetes-binaries-managers/blob/master/cmd/helmenv/
-[KDE Baloo]: https://wiki.archlinux.org/index.php/Baloo
 [kbenv]: https://github.com/little-angry-clouds/kubernetes-binaries-managers/tree/master/cmd/kbenv
+[KDE Baloo]: https://wiki.archlinux.org/index.php/Baloo
 [kitty]: https://github.com/kovidgoyal/kitty
 [kubectx]: https://github.com/ahmetb/kubectx
 [neofetch]: https://github.com/dylanaraps/neofetch
 [parallel]: https://www.gnu.org/software/parallel
 [pastebinit]: https://launchpad.net/pastebinit
 [pinentry]: https://wiki.archlinux.org/index.php/GnuPG#pinentry
+[Plasma]:https://kde.org/plasma-desktop/
 [psd]: https://wiki.archlinux.org/title/Profile-sync-daemon
 [pwgen]: https://sourceforge.net/projects/pwgen
 [starship]: https://starship.rs
