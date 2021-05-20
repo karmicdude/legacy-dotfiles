@@ -23,6 +23,7 @@ The installation itself requires [GNU Stow][GNU Stow] - awesome tool as a symlin
 * [kitty][kitty] - Cross-platform, fast, feature-rich, GPU based terminal
 * [kubectx][kubectx] - A util to manage and switch between clusters and namespaces (used in `k-context` and `k-namespace` aliases)
 * [neofetch][neofetch] - A command-line system information tool
+* [profile-sync-daemon][psd] - A tiny daemon designed to keep your browser profile in tempfs
 * [parallel][parallel] - A shell tool for executing jobs in parallel (used in `kubectl` function)
 * [pastebinit][pastebinit] - A multi pastebin service (used in `pb` alias)
 * [pinentry-qt][pinentry] - GUI application used to enter passphrases
@@ -54,6 +55,7 @@ yay -S \
   openssh \
   pastebinit \
   pinentry \
+  profile-sync-daemon \
   pwgen \
   starship \
   stow \
@@ -109,6 +111,22 @@ fc-cache -fr
 # Show fonts list
 fc-list
 ```
+### Google Chrome ###
+
+```bash
+# Change the amount of available memory for tmpfs, where chrome will store
+# its cache (see chrome-beta-flags.conf) and for storing the profile using psd
+# 25% - Change the percentage of total memory for your own reasons.
+sed -i "s/.*RuntimeDirectorySize=.*/RuntimeDirectorySize=25%/g" /etc/systemd/logind.conf
+```
+### Profile Sync Daemon ###
+
+```bash
+# Add psd-overlay-helper binary to execute the sudo in passwordless way
+echo "$USER ALL=(ALL) NOPASSWD: $(type -P psd-overlay-helper)" | sudo EDITOR='tee -a' visudo
+# enable psd
+systemctl --user enable psd
+```
 
 ## Features ##
 
@@ -132,6 +150,7 @@ fc-list
 [parallel]: https://www.gnu.org/software/parallel
 [pastebinit]: https://launchpad.net/pastebinit
 [pinentry]: https://wiki.archlinux.org/index.php/GnuPG#pinentry
+[psd]: https://wiki.archlinux.org/title/Profile-sync-daemon
 [pwgen]: https://sourceforge.net/projects/pwgen
 [starship]: https://starship.rs
 [VSCode]: https://code.visualstudio.com
