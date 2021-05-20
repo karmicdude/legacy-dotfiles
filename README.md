@@ -12,6 +12,7 @@ The installation itself requires [GNU Stow][GNU Stow] - awesome tool as a symlin
 <!-- TOC -->
 
 - [Dependencies](#dependencies)
+- [How to use it?](#how-to-use-it)
 - [Dependencies configuration](#dependencies-configuration)
     - [SSH Agent](#ssh-agent)
     - [Gist](#gist)
@@ -93,6 +94,20 @@ yay -S \
   nerd-fonts-mononoki \
   nerd-fonts-roboto-mono \
   nerd-fonts-ubuntu-mono
+```
+## How to use it?
+
+It is assumed that there are no configuration files for what you are installing.
+If the destination config files exist, an error will appear and you will need to
+manually resolve the conflict by deleting the existing files if you go to use mine.
+
+```bash
+# Just cd to repo_path/dotfiles
+# Simple run stow [package]. E.g.:
+cd repo_path/dotfiles
+stow bash inputrc kitty
+# Or install all of it at once
+stow *
 ```
 
 ## Dependencies configuration ##

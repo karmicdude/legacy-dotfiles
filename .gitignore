@@ -1,1 +1,4 @@
 *.code-workspace
+/dotfiles/gpg/*
+!/dotfiles/gpg/gpg-agnet.conf
+!/dotfiles/gpg/sshcontrol
