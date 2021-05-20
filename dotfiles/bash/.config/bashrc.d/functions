@@ -29,12 +29,9 @@ function shareit {
 
 # Generate random pass
 function pgen {
-  local len=$1
-  if [ -z "$len" ]; then
-    len=10
-  fi
+  local len="${1:-12}"
   #tr -dc A-Za-z0-9_ < /dev/urandom | head -c $len
-  tr -dc "[:graph:]" < /dev/urandom | head -c $len
+  tr -dc "[:graph:]" < /dev/urandom | head -c "$len"
 }
 
 # Additional commands for Docker
