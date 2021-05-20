@@ -2,7 +2,7 @@
 
 This repository contains a set of configuration files for the `bash` shell, `DE` and programs that I use most regularly.
 
-My favorite OS is [Arch Linux][Arch Linux] and [Plasma ][Plasma] (now), so package names and config paths are relevant for it and may a bit differ for other distros.
+My favorite OS is [Arch Linux][Arch Linux] and [Plasma][Plasma] en (now), so package names and config paths are relevant for it and may a bit differ for other distros.
 
 In addition, I use two workstations (PC and a laptop), which have slightly differences in the configs. So some configs are separated for use on different devices.
 
@@ -18,6 +18,7 @@ The installation itself requires [GNU Stow][GNU Stow] - awesome tool as a symlin
     - [Fonts](#fonts)
     - [Google Chrome](#google-chrome)
     - [Profile Sync Daemon](#profile-sync-daemon)
+    - [Kubectl](#kubectl)
 - [Features](#features)
 
 <!-- /TOC -->
@@ -140,8 +141,21 @@ sed -i "s/.*RuntimeDirectorySize=.*/RuntimeDirectorySize=25%/g" /etc/systemd/log
 ```bash
 # Add psd-overlay-helper binary to execute the sudo in passwordless way
 echo "$USER ALL=(ALL) NOPASSWD: $(type -P psd-overlay-helper)" | sudo EDITOR='tee -a' visudo
-# enable psd
+# enable psd service
 systemctl --user enable psd
+```
+### Kubectl ###
+
+```bash
+# You can create a file ~/.kube/config_list, in which you can
+# list the full paths to the separate cluster configs. E.g.:
+cat << EOF > ~/.kube/config_list
+/home/user/.kube/cluster1
+/home/user/.kube/cluster2
+/home/user/.kube/config
+EOF
+
+# Note: shortening ~ for home directory does't work
 ```
 
 ## Features ##

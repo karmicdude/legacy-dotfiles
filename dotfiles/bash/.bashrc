@@ -67,4 +67,10 @@ done
 
 [[ -f /usr/share/goto/goto.sh ]] && . /usr/share/goto/goto.sh
 
+# Kubectl configs
+if [ -f ~/.kube/config_list ]; then
+  KUBECONFIG=$(paste -sd ':' ~/.kube/config_list)
+  export KUBECONFIG
+fi
+
 # vim:ft=sh
