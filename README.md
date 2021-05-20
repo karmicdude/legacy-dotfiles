@@ -149,7 +149,7 @@ fc-list
 # Change the amount of available memory for tmpfs, where chrome will store
 # its cache (see chrome-beta-flags.conf) and for storing the profile using psd
 # 25% - Change the percentage of total memory for your own reasons.
-sed -i "s/.*RuntimeDirectorySize=.*/RuntimeDirectorySize=25%/g" /etc/systemd/logind.conf
+sudo sed -i "s/.*RuntimeDirectorySize=.*/RuntimeDirectorySize=25%/g" /etc/systemd/logind.conf
 ```
 ### Profile Sync Daemon ###
 
