@@ -16,6 +16,7 @@ The installation itself requires [GNU Stow][GNU Stow] - awesome tool as a symlin
 * [gist][gist] - GitHub gists tool (used in `out` alias)
 * [git][git] - Most popular source distributed version control system
 * [gnupg][gnupg] - OpenPGP standard implementation
+* [Google Chrome Beta][chrome] - A beta version of Google Chrome Browser
 * [goto][goto] - Fast projects navigation util (used in goto projects aliases)
 * [helmenv][helmenv] - Helm version manager (used in `helmenv` function)
 * [kbenv][kbenv] - `kubectl` version manager (used in `kbenv` function)
@@ -42,6 +43,7 @@ yay -S \
   bat \
   gistit \
   gnupg \
+  google-chrome-beta \
   goto-git \
   helmenv-bin \
   imagemagick \
@@ -118,6 +120,7 @@ fc-list
 [gist]: https://github.com/defunkt/gist
 [git]: https://git-scm.com
 [GNU Stow]: https://www.gnu.org/software/stow/
+[chrome]: https://www.google.com/intl/en/chrome/beta
 [goto]: https://github.com/iridakos/goto/
 [gnupg]: https://gnupg.org
 [helmenv]: https://github.com/little-angry-clouds/kubernetes-binaries-managers/blob/master/cmd/helmenv/
