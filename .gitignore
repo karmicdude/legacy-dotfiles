@@ -1,4 +1,14 @@
 *.code-workspace
+# GPG
 /dotfiles/gpg/*
 !/dotfiles/gpg/gpg-agnet.conf
 !/dotfiles/gpg/sshcontrol
+# PSD
+/dotfiles/psd/.config/psd/*
+!/dotfiles/psd/.config/psd/psd.conf
+# fish
+/dotfiles/fish/.config/fish/fish_variables
+/dotfiles/fish/.config/fish/functions/__*
+/dotfiles/fish/.config/fish/conf.d/*
+
+# vim: ft=sh
