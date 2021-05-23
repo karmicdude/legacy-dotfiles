@@ -1,0 +1,3 @@
+[submodule "dotfiles/fish"]
+	path = dotfiles/fish
+	url = https://github.com/karmicdude/fish-shell
