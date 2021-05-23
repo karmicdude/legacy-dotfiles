@@ -4,3 +4,6 @@
 [submodule "dotfiles/bash"]
 	path = dotfiles/bash
 	url = https://github.com/karmicdude/bash-shell
+[submodule "dotfiles/asdf/.asdf"]
+	path = dotfiles/asdf/.asdf
+	url = https://github.com/asdf-vm/asdf.git
