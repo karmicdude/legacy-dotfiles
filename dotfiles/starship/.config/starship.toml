@@ -1,7 +1,6 @@
 add_newline = true
 
 format = """
-$time\
 $directory\
 $git_branch\
 $git_commit\
@@ -71,9 +70,7 @@ format = '[❘](bold fg:#6b6b6b) [$symbol $workspace]($style) '
 symbol = '₮'
 
 [time]
-disabled = false
-format = '[\[$time\]]($style) '
-time_format = '%H:%M'
+disabled = true
 
 [aws]
 disabled = true
