@@ -24,3 +24,5 @@
 	trustExitCode = true
 [difftool "kitty"]
 	cmd = kitty +kitten diff $LOCAL $REMOTE
+[core]
+	excludesFile = =
