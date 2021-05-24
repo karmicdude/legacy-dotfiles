@@ -1,8 +1,8 @@
 # KarmicDude dotfiles #
 
-This repository contains a set of configuration files for the `bash` shell, `DE` and programs that I use most regularly.
+This repository contains a set of configuration files for `bash` and `fish` shells, [KDE Plasma Desktop][Plasma] and programs that I use most regularly.
 
-My favorite OS is [Arch Linux][Arch Linux] and [Plasma][Plasma] en (now), so package names and config paths are relevant for it and may a bit differ for other distros.
+My favorite OS is [Arch Linux][Arch Linux], so package names and config paths are relevant for it and may a bit differ for other distros.
 
 In addition, I use two workstations (PC and a laptop), which have slightly differences in the configs. So some configs are separated for use on different devices.
 
@@ -20,32 +20,32 @@ The installation itself requires [GNU Stow][GNU Stow] - awesome tool as a symlin
     - [Google Chrome](#google-chrome)
     - [Profile Sync Daemon](#profile-sync-daemon)
     - [Kubectl](#kubectl)
-- [Features](#features)
+- [TODO](#todo)
 
 <!-- /TOC -->
 
 ## Dependencies ##
 
-* [GNU Stow][GNU Stow] - Symlink manager
-* [alsa-utils][alsa] - ALSA utilites (used in `sb_output_switcher.sh` script)
+* [GNU Stow][GNU Stow] - A symlink manager
+* [alsa-utils][alsa] - (used in `sb_output_switcher.sh` script)
 * [bat][bat] - A `cat` clone with syntax highlighting and Git integration
-* [gist][gist] - GitHub gists tool (used in `out` alias)
-* [git][git] - Most popular source distributed version control system
-* [gnupg][gnupg] - OpenPGP standard implementation
+* [gist][gist] - A GitHub gists tool (used in `out` alias)
+* [git][git] - A most popular source distributed version control system
+* [gnupg][gnupg] - An OpenPGP standard implementation
 * [Google Chrome Beta][chrome] - A beta version of Google Chrome Browser
-* [goto][goto] - Fast projects navigation util (used in goto projects aliases)
-* [helmenv][helmenv] - Helm version manager (used in `helmenv` function)
-* [kbenv][kbenv] - `kubectl` version manager (used in `kbenv` function)
-* [kitty][kitty] - Cross-platform, fast, feature-rich, GPU based terminal
-* [kubectx][kubectx] - A util to manage and switch between clusters and namespaces (used in `k-context` and `k-namespace` aliases)
+* [fish-shell][fish] - A smart and user-friendly new-generation command line shell
+* [fisher][fisher] - A plugin manager for [`fish`][fish]
+* [fzy][fzy] - A fast, simple fuzzy text selector for the terminal with an advanced scoring algorithm
+* [kitty][kitty] - A cross-platform, fast, feature-rich, GPU based terminal
+* [kubectx][kubectx] - An util to manage and switch between clusters and namespaces (used for abbr: `kx` and `kns`)
 * [neofetch][neofetch] - A command-line system information tool
 * [profile-sync-daemon][psd] - A tiny daemon designed to keep your browser profile in tempfs
 * [parallel][parallel] - A shell tool for executing jobs in parallel (used in `kubectl` function)
 * [pastebinit][pastebinit] - A multi pastebin service (used in `pb` alias)
-* [pinentry-qt][pinentry] - GUI application used to enter passphrases
-* [pwgen][pwgen] - password generation tool (used in `pwgen` alias)
-* [starship][starship] - The minimal, blazing-fast and infinitely customizable prompt
-* [VSCode][VSCode] - popular code editor (used in `c` alias)
+* [pinentry-qt][pinentry] - A GUI application used to enter passphrases
+* [pwgen][pwgen] - A password generation tool (used in `pwgen` alias)
+* [starship][starship] - A minimal, blazing-fast and infinitely customizable prompt
+* [VSCode][VSCode] - A popular code editor (used in `c` alias)
 
 ```bash
 # Install yay as AUR helper
@@ -61,12 +61,12 @@ yay -S \
   gistit \
   gnupg \
   google-chrome-beta \
-  goto-git \
-  helmenv-bin \
   imagemagick \
-  kbenv-bin \
-  kitty \
   kubectx \
+  fish \
+  fisher \
+  fzy \
+  kitty \
   neofetch \
   openssh \
   pastebinit \
@@ -173,24 +173,37 @@ EOF
 # Note: shortening ~ for home directory does't work
 ```
 
-## Features ##
+## TODO ##
 
-* Disabled KDE [**Baloo**][KDE Baloo] service
+- [ ] Add installation info about git submodules
+- [ ] Add link to fish repo `README.md`
+- [ ] Add infromation about migration from bash to fish
+- [ ] Replace bash aliases with fish functions and abbreviations
+- [ ] Add stow modules and configs for:
+  - [ ] htop
+  - [ ] [fzf][fzf]
+  - [ ] [latte-dock][latte-dock]
+  - [ ] [exa][exa]
+  - [ ] [ranger][ranger]
+
+<!-- LINKS -->
 
 [alsa]: https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture#ALSA_Utilities
 [Arch Linux]: https://wiki.archlinux.org/index.php/Arch_Linux
 [bat]: https://github.com/sharkdp/bat
 [chrome]: https://www.google.com/intl/en/chrome/beta
+[exa]: https://the.exa.website
+[fish]: https://fishshell.com/
+[fisher]: https://github.com/jorgebucaran/fisher
+[fzf]: https://github.com/junegunn/fzf
 [gist]: https://github.com/defunkt/gist
 [git]: https://git-scm.com
 [GNU Stow]: https://www.gnu.org/software/stow/
 [gnupg]: https://gnupg.org
-[goto]: https://github.com/iridakos/goto/
-[helmenv]: https://github.com/little-angry-clouds/kubernetes-binaries-managers/blob/master/cmd/helmenv/
-[kbenv]: https://github.com/little-angry-clouds/kubernetes-binaries-managers/tree/master/cmd/kbenv
 [KDE Baloo]: https://wiki.archlinux.org/index.php/Baloo
 [kitty]: https://github.com/kovidgoyal/kitty
 [kubectx]: https://github.com/ahmetb/kubectx
+[latte-dock]: https://github.com/KDE/latte-dock
 [neofetch]: https://github.com/dylanaraps/neofetch
 [parallel]: https://www.gnu.org/software/parallel
 [pastebinit]: https://launchpad.net/pastebinit
@@ -198,5 +211,6 @@ EOF
 [Plasma]:https://kde.org/plasma-desktop/
 [psd]: https://wiki.archlinux.org/title/Profile-sync-daemon
 [pwgen]: https://sourceforge.net/projects/pwgen
+[ranger]: https://github.com/ranger/ranger
 [starship]: https://starship.rs
 [VSCode]: https://code.visualstudio.com
