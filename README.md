@@ -196,6 +196,7 @@ EOF
 [fish]: https://fishshell.com/
 [fisher]: https://github.com/jorgebucaran/fisher
 [fzf]: https://github.com/junegunn/fzf
+[fzy]: https://github.com/jhawthorn/fzy
 [gist]: https://github.com/defunkt/gist
 [git]: https://git-scm.com
 [GNU Stow]: https://www.gnu.org/software/stow/
