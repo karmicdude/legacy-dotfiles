@@ -11,6 +11,7 @@
 	l = log --color --graph --date=format:\"%Y-%m-%d %H:%M:%S\" --format=\"%C(Yellow)%h%C(Reset) %C(White)| %C(bold blue)<%cn>%Creset %C(White)| %C(Cyan)%ad %C(White)|%C(Reset) %<(100,trunc)%s %C(Yellow)%d%C(Reset)\"
 	c = commit -m
 	pushall = push all --all
+	r = restore --staged
 [pull]
 	rebase = false
 [hub]
