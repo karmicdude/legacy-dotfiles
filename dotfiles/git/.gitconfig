@@ -12,6 +12,7 @@
 	c = commit -m
 	pushall = push all --all
 	r = restore --staged
+	cur = rev-parse --short HEAD
 [pull]
 	rebase = false
 [hub]
