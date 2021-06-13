@@ -1,8 +1,9 @@
 *.code-workspace
 # GPG
-/dotfiles/gpg/*
-!/dotfiles/gpg/gpg-agnet.conf
-!/dotfiles/gpg/sshcontrol
+dotfiles/gpg/.gnupg/*
+!dotfiles/gpg/.gnupg/gpg.conf
+!dotfiles/gpg/.gnupg/gpg-agnet.conf
+!dotfiles/gpg/.gnupg/sshcontrol
 # PSD
 /dotfiles/psd/.config/psd/*
 !/dotfiles/psd/.config/psd/psd.conf
