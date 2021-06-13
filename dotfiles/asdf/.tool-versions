@@ -2,3 +2,4 @@ kubectl 1.21.1
 helm 3.6.0
 terraform 0.15.5
 kubectx 0.9.3
+mc 2020-03-06T23-29-45Z
