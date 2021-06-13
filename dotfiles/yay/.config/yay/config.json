@@ -9,7 +9,7 @@
     "rebuild": "no",
     "answerclean": "",
     "answerdiff": "None",
-    "answeredit": "yes",
+    "answeredit": "",
     "answerupgrade": "yes",
     "gitbin": "git",
     "gpgbin": "gpg",
