@@ -2,6 +2,7 @@
 # GPG
 dotfiles/gpg/.gnupg/*
 !dotfiles/gpg/.gnupg/gpg.conf
+!dotfiles/gpg/.gnupg/dirmngr.conf
 !dotfiles/gpg/.gnupg/gpg-agnet.conf
 !dotfiles/gpg/.gnupg/sshcontrol
 # PSD
